@@ -1,12 +1,19 @@
 import {NgModule} from '@angular/core';
 import {APOLLO_OPTIONS} from 'apollo-angular';
-import {ApolloClientOptions, InMemoryCache} from '@apollo/client/core';
+import {ApolloClientOptions, createHttpLink, InMemoryCache} from '@apollo/client/core';
 import {HttpLink} from 'apollo-angular/http';
+import { HttpHeaders } from '@angular/common/http';
 
-const uri = 'https://48p1r2roz4.sse.codesandbox.io'; // our GraphQL API
+const token = "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";
+
+const uri = 'https://api.github.com/graphql'; // our GraphQL API
+
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
-    link: httpLink.create({uri}),
+    link: createHttpLink({
+      uri: 'https://api.github.com/graphql',
+      headers: new HttpHeaders().set('Authorization',`Bearer ${token}` )
+    }),
     cache: new InMemoryCache(),
   };
 }

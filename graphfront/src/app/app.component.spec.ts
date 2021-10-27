@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'graphql'`, () => {
+  it(`should have as title 'graphfront'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('graphql');
+    expect(app.title).toEqual('graphfront');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('graphql app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('graphfront app is running!');
   });
 });

@@ -1,0 +1,46 @@
+.app-page {
+    margin-left: 25%;
+}
+
+.navigation {
+    list-style-type: none; 
+	display: flex;
+}
+
+.mat-card {
+    display: flex;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px #0003
+}
+
+.bloc_1 {
+    display: flex;
+    border: solid;
+    border-right: 0ch;
+}
+
+.bloc_2 {
+    border: solid;
+}
+
+.langage-graphique {
+    display: flex;
+}
+
+.bloc_3 {
+    border: solid;
+}
+
+.mat-grid-tile {
+    background-color: beige;
+}
+
+.mat-grid-list {
+    margin-right: 70% !important;
+    padding-bottom: 250px !important;
+}

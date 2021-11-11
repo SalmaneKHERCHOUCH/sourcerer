@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Apollo, gql} from 'apollo-angular';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatToolbarRow} from '@angular/material/toolbar/toolbar';
+
+
 @Component({
   selector: 'app-firstquery',
-  template: `
-    <div *ngIf="loading">
-      Loading...
-    </div>
-    <div *ngIf="error">
-      Error :(
-    </div>
-    <h1>{{login}}</h1>
-  `,
+  templateUrl: './firstquery.component.html',
+  styleUrls: ['./firstquery.component.css'],
 })
 export class FirstqueryComponent implements OnInit {
 

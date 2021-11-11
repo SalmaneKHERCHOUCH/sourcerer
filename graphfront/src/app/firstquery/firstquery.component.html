@@ -1,1 +1,100 @@
+<div class="page">
 
+<!--Ici on vas representer notre entete-->
+<div class="en-tete">
+    <mat-toolbar style="background-color: rgb(0, 255, 179); height: 64px;">
+        <span style="margin-left: 25%;">Did you know ? You can add statistics from your private repos to your profile</span>
+    </mat-toolbar>
+</div>
+
+<br>
+
+<div class="app-page">
+    <!--Ici on pourra sélectionner mes différents réseaux -->
+    <span>Share your profile on : </span>
+
+    <ul class="navigation">
+        <li style="margin-right: 10px;">Linkedin</li>
+        <li style="margin-right: 10px;">Twitter</li>
+        <li style="margin-right: 10px;">Facebook</li>
+        <li style="margin-right: 10px;">Get HTML</li>
+    </ul>
+
+    <!--On affiche le nom du compte github ainsi que la localisation-->
+    <ng-container>
+        <h1 *ngIf="">{{login}}</h1>
+        <h2 style="position: relative; margin-left: 750px; margin-top: -50px;">La localisaton</h2>
+    </ng-container>
+
+    <!--Notre premier gros blocs-->
+    <span>Salmane</span>
+    <div class="bloc_1">
+        <img src="assets/angular.png">
+        <mat-card>Commits 3</mat-card>
+        <mat-card>Repos 4</mat-card>
+        <mat-card>Lines of codes 5</mat-card>
+        <mat-card>Followers 6</mat-card>
+        <mat-card>Following 10</mat-card>
+        <mat-card>Refresh</mat-card>
+    </div>
+
+    <br>
+
+    <!--Notre 2e gros blocs-->
+    <div class="bloc_2">
+    <ng-container>
+        <h1>Overview</h1>
+        <h3 style="position: relative; margin-left: 750px; margin-top: -50px;">3 repos</h3>
+        <h3 style="position: relative; margin-left: 750px; margin-top: 3px;">Last Update : </h3>
+    </ng-container>
+
+    <br>
+
+    <!--A l'intérieur de cette espace on vas créer notre graphique-->
+
+    <div class="langage-graphique">
+        <mat-card>Language 1</mat-card>
+        <mat-card>Language 1 5</mat-card>
+        <mat-card>Language 6</mat-card>
+        <mat-card>Language 10</mat-card>
+    </div>
+    </div>
+    <br>
+
+    <!--Notre 3e gros blocs-->
+    <div class="bloc_3">
+    <ng-container>
+        <h1>Languages</h1>
+        <h3 style="position: relative; margin-left: 750px; margin-top: -50px;">3 repos</h3>
+        <h3 style="position: relative; margin-left: 750px; margin-top: 3px;">Last Update : </h3>
+    </ng-container>
+
+    <br>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <app-gridlist></app-gridlist>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-gridlist></app-gridlist>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-gridlist></app-gridlist>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <app-gridlist></app-gridlist>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+        <span>Graphique en cours...</span>
+
+    </div>
+    <br>
+
+    <!--Notre 4e gros blocs-->
+
+    <!------------------------------------------------------------->
+
+</div>
+
+</div>

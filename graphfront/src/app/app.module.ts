@@ -9,21 +9,33 @@ import {HttpLink} from 'apollo-angular/http';
 import {createHttpLink, InMemoryCache} from '@apollo/client/core'
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { FirstqueryComponent } from './firstquery/firstquery.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-const token = "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";
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { GridlistComponent } from './gridlist/gridlist.component';
+
+
+const token = "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";
 
 const uri = 'https://api.github.com/graphql'; // our GraphQL API
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstqueryComponent
+    FirstqueryComponent,
+    GridlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [
     {

@@ -1,5 +1,12 @@
+.page {
+    background-color: rgb(224, 223, 223);
+}
+
 .app-page {
     margin-left: 25%;
+    margin-right: 25%;
+    background-color: white;
+    box-shadow: 2px 2px -1px -1px #0003
 }
 
 .navigation {
@@ -9,23 +16,26 @@
 
 .mat-card {
     display: flex;
-    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-    background: white;
-    display: block;
-    position: relative;
-    padding: 16px;
+    background: rgb(247, 224, 176);
+    padding: 1em;
+    margin: 1em;
     border-radius: 4px;
-    box-shadow: 0 2px 1px -1px #0003
+    box-shadow: 0 2px 1px -1px #0003;
+    text-align: center !important;
+
+    height: 48px;
+    width: 100px;
 }
 
 .bloc_1 {
     display: flex;
-    border: solid;
-    border-right: 0ch;
+    border: 2px solid;
+    padding: 1em;
 }
 
 .bloc_2 {
-    border: solid;
+    border: 2px solid;
+    padding: 1em;
 }
 
 .langage-graphique {
@@ -33,7 +43,8 @@
 }
 
 .bloc_3 {
-    border: solid;
+    border: 2px solid;
+    padding: 1em;
 }
 
 .mat-grid-tile {
@@ -43,4 +54,5 @@
 .mat-grid-list {
     margin-right: 70% !important;
     padding-bottom: 250px !important;
+    padding: 1em;
 }

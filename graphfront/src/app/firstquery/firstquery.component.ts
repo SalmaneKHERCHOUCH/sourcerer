@@ -271,30 +271,6 @@ export class FirstqueryComponent implements OnInit {
          this.error = result.error;
        });
 
-       this.apollo
-       .watchQuery({
-         query: gql`
-         query {
-          user(login: "SalmaneKHERCHOUCH") {
-            repositories(first: 100, privacy: PUBLIC) {
-              nodes {
-                name
-              }
-            }
-          }
-        }
-         `,
-       })
-       .valueChanges.subscribe((result: any) => {
-
-        for(let i=0; i< Object.keys(this.user["repositories"]["nodes"]).length; i++) {
-          this.repository.push(this.user["repositories"]["nodes"][i]["name"]);
-          console.log("Le nom des repositories", this.user["repositories"]["nodes"][i]["name"]);
-        }
-         this.loading = result.loading;
-         this.error = result.error;
-         
-       });
   }
 
 }

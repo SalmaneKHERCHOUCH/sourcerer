@@ -10,8 +10,8 @@
 
     <br>
 
-    <div class="app-page">
-        <!--Ici on pourra sélectionner mes différents réseaux -->
+    <!--Ici on pourra sélectionner mes différents réseaux -->
+    <div class="reseau">
         <span> Share your profile on : </span>
 
         <ul class="navigation">
@@ -27,92 +27,93 @@
             <h2 style="position: relative; margin-left: 750px; margin-top: -50px;">{{company}}</h2>
             <!-- <h2 style="position: relative; margin-left: 750px; margin-top: -50px;">Localisation</h2>-->
         </ng-container>
+    </div>
 
-        <!--Notre premier gros blocs-->
-        <span>Salmane</span>
-        <div class="bloc_1">
-            <img src="{{imagePerso}}" style="width: 170px;">
-            <mat-card>Commits {{commit}}</mat-card><br>
-            <mat-card>Repos {{totalrepository}}</mat-card>
-            <mat-card>Lines of codes </mat-card>
-            <mat-card>Followers {{follower}}</mat-card>
-            <mat-card>Following {{following}}</mat-card>
-            <mat-card>Refresh</mat-card>
-        </div>
+    <br>
+    <br>
 
-        <br>
+    <span style="margin-left: 25%; margin-right: 25%;">Salmane</span>
+    <!--Notre premier gros blocs-->
+    <div class="bloc_1">
 
-        <!--Notre 2e gros blocs-->
-        <div class="bloc_2">
-            <ng-container>
-                <h1>Overview</h1>
-                <h3 style="position: relative; margin-left: 750px; margin-top: -50px;">{{totalrepository}} repos</h3>
-                <h3 style="position: relative; margin-left: 750px; margin-top: 3px;">Last Update : {{update}}</h3>
-            </ng-container>
-
-            <br>
-
-            <!--A l'intérieur de cette espace on vas créer notre graphique-->
-
-            <div class="langage-graphique">
-                <mat-card>{{langage}}</mat-card>
-                <mat-card>{{langage}}</mat-card>
-                <mat-card>{{langage}}</mat-card>
-                <mat-card>{{langage}}</mat-card>
-            </div>
-        </div>
-        <br>
-
-        <!--Notre 3e gros blocs-->
-        <div class="bloc_3">
-            <ng-container>
-                <h1>Languages</h1>
-                <h3 style="position: relative; margin-left: 750px; margin-top: -50px;">{{totalrepository}} repos</h3>
-                <h3 style="position: relative; margin-left: 750px; margin-top: 3px;">Last Update : {{update}}</h3>
-            </ng-container>
-
-            <br>
-
-            <mat-grid-list cols="2" rowHeight="2:1">
-                <mat-grid-tile>
-                    <ul style="list-style-type: none;">
-                        <li>Language C</li>
-                        <li>Commit 32</li>
-                        <li>Lock: 3</li>
-                    </ul>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <ul style="list-style-type: none;">
-                        <li>Language C</li>
-                        <li>Commit 32</li>
-                        <li>Lock: 3</li>
-                    </ul>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <ul style="list-style-type: none;">
-                        <li>Language C</li>
-                        <li>Commit 32</li>
-                        <li>Lock: 3</li>
-                    </ul>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <ul style="list-style-type: none;"> 
-                        <li>Language C</li>
-                        <li>Commit 32</li>
-                        <li>Lock: 3</li>
-                    </ul>
-                </mat-grid-tile>
-            </mat-grid-list>
-
-            <span>Graphique en cours...</span>
-
-        </div>
-        <br>
-
-        <!--Notre 4e gros blocs-->
-
-        <!------------------------------------------------------------->
+        <img src="{{imagePerso}}" style="width: 170px;">
+        <mat-card>Commits {{commit}}</mat-card><br>
+        <mat-card>Repos {{totalrepository}}</mat-card>
+        <mat-card>Lines of codes </mat-card>
+        <mat-card>Followers {{follower}}</mat-card>
+        <mat-card>Following {{following}}</mat-card>
+        <mat-card>Refresh</mat-card>
 
     </div>
+
+    <br>
+    <br>
+
+    <!--Notre 2e gros blocs-->
+    <div class="bloc_2">
+        <ng-container>
+            <h1>Overview</h1>
+            <h3 style="position: relative; margin-left: 750px; margin-top: -50px;">{{totalrepository}} repos</h3>
+            <h3 style="position: relative; margin-left: 750px; margin-top: 3px;">Last Update : {{update}}</h3>
+        </ng-container>
+
+        <br>
+
+        <!--A l'intérieur de cette espace on vas créer notre graphique-->
+
+        <div class="langage-graphique">
+            <mat-card>{{langage1}}</mat-card>
+            <mat-card>{{langage2}}</mat-card>
+            <mat-card>{{langage3}}</mat-card>
+            <mat-card>{{langage4}}</mat-card>
+        </div>
+    </div>
+    <br>
+
+    <!--Notre 3e gros blocs-->
+    <div class="bloc_3">
+        <ng-container>
+            <h1>Languages</h1>
+            <h3 style="position: relative; margin-left: 750px; margin-top: -50px;">{{totalrepository}} repos</h3>
+            <h3 style="position: relative; margin-left: 750px; margin-top: 3px;">Last Update : {{update}}</h3>
+        </ng-container>
+
+        <br>
+
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+                <ul style="list-style-type: none;">
+                    <li>{{langage1}}</li>
+                    <li>Commit 32</li>
+                </ul>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <ul style="list-style-type: none;">
+                    <li>{{langage2}}</li>
+                    <li>Commit 32</li>
+                </ul>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <ul style="list-style-type: none;">
+                    <li>{{langage3}}</li>
+                    <li>Commit 32</li>
+                </ul>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <ul style="list-style-type: none;">
+                    <li>{{langage4}}</li>
+                    <li>Commit 32</li>
+                </ul>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <span>Graphique en cours...</span>
+
+    </div>
+    <br>
+
+    <!--Notre 4e gros blocs-->
+    
+    <!------------------------------------------------------------->
 
 </div>

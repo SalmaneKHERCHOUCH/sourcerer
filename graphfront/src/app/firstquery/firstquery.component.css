@@ -1,12 +1,5 @@
 .page {
-    background-color: rgb(224, 223, 223);
-}
-
-.app-page {
-    margin-left: 25%;
-    margin-right: 25%;
-    background-color: white;
-    box-shadow: 2px 2px -1px -1px #0003
+    background-color: beige;
 }
 
 .navigation {
@@ -20,22 +13,35 @@
     padding: 1em;
     margin: 1em;
     border-radius: 4px;
-    box-shadow: 0 2px 1px -1px #0003;
     text-align: center !important;
 
     height: 48px;
     width: 100px;
 }
 
+.reseau {
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+}
+
 .bloc_1 {
     display: flex;
     border: 2px solid;
     padding: 1em;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    background-color: aquamarine;
 }
 
 .bloc_2 {
     border: 2px solid;
     padding: 1em;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    background-color: rgb(86, 204, 165);
 }
 
 .langage-graphique {
@@ -45,14 +51,32 @@
 .bloc_3 {
     border: 2px solid;
     padding: 1em;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    background-color: rgb(42, 160, 121);
+}
+
+.bloc_4 {
+    border: 2px solid;
+    padding: 1em;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+    background-color: rgb(42, 160, 121);
 }
 
 .mat-grid-tile {
     background-color: beige;
+    border: 1px solid;
 }
 
 .mat-grid-list {
     margin-right: 70% !important;
     padding-bottom: 250px !important;
     padding: 1em;
+}
+
+table {
+    width: 100%;
 }

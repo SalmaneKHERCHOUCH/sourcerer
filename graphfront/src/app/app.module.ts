@@ -14,10 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatTableModule} from '@angular/material/table';
 
 
 
-const token = "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";
+
+const token = "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";
 
 const uri = 'https://api.github.com/graphql'; // our GraphQL API
 
@@ -35,7 +37,8 @@ const uri = 'https://api.github.com/graphql'; // our GraphQL API
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule
   ],
   providers: [
     {

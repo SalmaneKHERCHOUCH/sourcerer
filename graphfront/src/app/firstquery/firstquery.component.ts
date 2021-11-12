@@ -13,16 +13,25 @@ import {MatToolbarRow} from '@angular/material/toolbar/toolbar';
 export class FirstqueryComponent implements OnInit {
 
   login: string | undefined;
+  user:any = [] ;
   loading = true;
   error: any;
   company: string | undefined;
   totalrepository: number | undefined;
   follower: number | undefined;
   following: number | undefined;
-  commit: number | undefined;
+  commit:any = [];
   update: string | undefined;
   imagePerso: any;
-  langage: string | undefined;
+  langage1: string | undefined;
+  langage2: string | undefined;
+  langage3: string | undefined;
+  langage4: string | undefined;
+  dataSource: any;
+
+  repository:any = [];
+
+  displayedColumns: string[] = ['repository', 'commits', 'langage'];
 
   constructor(private apollo: Apollo) { }
 
@@ -86,12 +95,18 @@ export class FirstqueryComponent implements OnInit {
       .watchQuery({
         query: gql`
         query {
-          repository(name: "learn.graphql", owner: "SalmaneKHERCHOUCH") {
-            object(expression:"main") {
-              ... on Commit {
-                id
-                history {
-                  totalCount
+          user(login: "SalmaneKHERCHOUCH") {
+            repositories(first: 100, privacy: PUBLIC) {
+              totalCount
+              nodes {
+                defaultBranchRef {
+                  target {
+                    ... on Commit {
+                      history {
+                        totalCount
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -100,7 +115,11 @@ export class FirstqueryComponent implements OnInit {
         `,
       })
       .valueChanges.subscribe((result: any) => {
-        this.commit = result?.data?.repository.object.history.totalCount;
+        this.user = result?.data?.user;
+        for(let i=0; i< Object.keys(this.user["repositories"]["nodes"]).length; i++) {
+          this.commit.push(this.user["repositories"]["nodes"][i]["defaultBranchRef"]["target"]["history"]["totalCount"])
+        } 
+        this.commit = eval(this.commit.join("+"));
         this.loading = result.loading;
         this.error = result.error;
       });
@@ -193,9 +212,88 @@ export class FirstqueryComponent implements OnInit {
          `,
        })
        .valueChanges.subscribe((result: any) => {
-         this.langage = result?.data?.repository.primaryLanguage.name;
+         this.langage1 = result?.data?.repository.primaryLanguage.name;
          this.loading = result.loading;
          this.error = result.error;
+       });
+
+       this.apollo
+       .watchQuery({
+         query: gql`
+         query {
+          repository(name: "hi-python", owner: "SalmaneKHERCHOUCH") {
+            primaryLanguage {
+              name
+            }
+          }
+        }
+         `,
+       })
+       .valueChanges.subscribe((result: any) => {
+         this.langage2 = result?.data?.repository.primaryLanguage.name;
+         this.loading = result.loading;
+         this.error = result.error;
+       });
+
+       this.apollo
+       .watchQuery({
+         query: gql`
+         query {
+          repository(name: "sourcerer", owner: "SalmaneKHERCHOUCH") {
+            primaryLanguage {
+              name
+            }
+          }
+        }
+         `,
+       })
+       .valueChanges.subscribe((result: any) => {
+         this.langage3 = result?.data?.repository.primaryLanguage.name;
+         this.loading = result.loading;
+         this.error = result.error;
+       });
+
+       this.apollo
+       .watchQuery({
+         query: gql`
+         query {
+          repository(name: "efre-mdfs-python-alexandry", owner: "SalmaneKHERCHOUCH") {
+            primaryLanguage {
+              name
+            }
+          }
+        }
+         `,
+       })
+       .valueChanges.subscribe((result: any) => {
+         this.langage4 = result?.data?.repository.primaryLanguage.name;
+         this.loading = result.loading;
+         this.error = result.error;
+       });
+
+       this.apollo
+       .watchQuery({
+         query: gql`
+         query {
+          user(login: "SalmaneKHERCHOUCH") {
+            repositories(first: 100, privacy: PUBLIC) {
+              nodes {
+                name
+              }
+            }
+          }
+        }
+         `,
+       })
+       .valueChanges.subscribe((result: any) => {
+
+        for(let i=0; i< Object.keys(this.user["repositories"]["nodes"]).length; i++) {
+          this.repository.push(this.user["repositories"]["nodes"][i]["name"]);
+          console.log("Le nom des repositories", this.user["repositories"]["nodes"][i]["name"]);
+        }
+         this.loading = result.loading;
+         this.error = result.error;
+         
        });
   }
 

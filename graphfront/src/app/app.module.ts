@@ -19,7 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 
 
 
-const token = "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";
+const token = "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";
 
 const uri = 'https://api.github.com/graphql'; // our GraphQL API
 
